@@ -1,6 +1,5 @@
-
-
-/**The BigTwoCard class is a subclass of the Card class, and is used to model a card used in a Big Two card game. It should override the compareTo() method it inherited from the Card class to reflect the ordering of cards used in a Big Two card game. Below is a detailed description for the BigTwoCard class.
+/**
+ * The BigTwoCard class is a subclass of the Card class, and is used to model a card used in a Big Two card game. It should override the compareTo() method it inherited from the Card class to reflect the ordering of cards used in a Big Two card game. Below is a detailed description for the BigTwoCard class.
  * @author Vinit Miranda
  *
  */
@@ -8,7 +7,8 @@ public class BigTwoCard extends Card{
 	
 	private static final long serialVersionUID = -5822018182891811204L;
 	
-	/**a constructor for building a card with the specified suit and rank. suit is an integer between 0 and 3, and rank is an integer between 0 and 12.
+	/**
+	 * a constructor for building a card with the specified suit and rank. suit is an integer between 0 and 3, and rank is an integer between 0 and 12.
 	 * @param suit
 	 * @param rank
 	 */
@@ -16,7 +16,8 @@ public class BigTwoCard extends Card{
 		super(suit, rank);
 	}
 	
-	/* method for comparing this card with the specified card for order. Returns a negative integer, zero, or a positive integer as this card is less than, equal to, or greater than the specified card.
+	/* 
+	 * method for comparing this card with the specified card for order. Returns a negative integer, zero, or a positive integer as this card is less than, equal to, or greater than the specified card.
 	 * (non-Javadoc)
 	 * @see Card#compareTo(Card)
 	 */

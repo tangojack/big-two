@@ -230,13 +230,13 @@ public class BigTwoTable implements CardGameTable{
 			Font font = new Font ("Calibri", Font.BOLD , 20);
 			g.setFont(font);
 			String[] avatarNames={"flash_64.png", "batman_64.png", "superman_64.png", "green_lantern_64.png"};
-			cardBackImage = new ImageIcon("src/cards/b.gif").getImage();
+			cardBackImage = new ImageIcon("assets/cards/b.gif").getImage();
 			//g.drawString(Integer.toString((game.getNumOfPlayers())), 90,490);
 			for (int i = 0; i < game.getNumOfPlayers(); i++){
 				
 				if (((BigTwoClient)game).getPlayerList().get(i).getName() != null){
 					g.drawString(((BigTwoClient)game).getPlayerList().get(i).getName(), 0, 35 + (i * 100));
-					avatars[i] = new ImageIcon("src/003-Character/png/64/" + avatarNames[i]).getImage();
+					avatars[i] = new ImageIcon("assets/003-Character/png/64/" + avatarNames[i]).getImage();
 					g.drawImage(avatars[i], 0, 40 + (i * 100), this);
 				}
 			}
@@ -257,7 +257,7 @@ public class BigTwoTable implements CardGameTable{
 					if(i == activePlayer){
 						rank = ranks[players.get(i).getCardsInHand().getCard(j).getRank()];
 						suit = suits[players.get(i).getCardsInHand().getCard(j).getSuit()];
-						cardImages[i][j] = new ImageIcon("src/cards/" + rank + suit + ".gif").getImage();
+						cardImages[i][j] = new ImageIcon("assets/cards/" + rank + suit + ".gif").getImage();
 						if(!selected[j])
 							g.drawImage(cardImages[i][j], x, y, this);
 						else
@@ -272,7 +272,7 @@ public class BigTwoTable implements CardGameTable{
 				for (int i = 0; i < game.getHandsOnTable().get(game.getHandsOnTable().size() - 1).size(); i++){
 					rank = ranks[game.getHandsOnTable().get(game.getHandsOnTable().size() - 1).getCard(i).getRank()];
 					suit = suits[game.getHandsOnTable().get(game.getHandsOnTable().size() - 1).getCard(i).getSuit()];
-					g.drawImage(new ImageIcon("src/cards/" + rank + suit + ".gif").getImage()
+					g.drawImage(new ImageIcon("assets/cards/" + rank + suit + ".gif").getImage()
 							, 70+ (i*15), 420, this);
 				}
 			}
